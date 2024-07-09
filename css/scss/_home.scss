@@ -303,6 +303,7 @@
     &-item {
       max-width: 33.333%;
       width: 100%;
+      min-height: 154px;
       padding: 20px 16px;
       border-radius: 8px;
       background-color: $white;
@@ -312,6 +313,7 @@
 
       @media(max-width: 768px) {
         max-width: 100%;
+        min-height: inherit;
       }
 
       &.active {
@@ -411,6 +413,10 @@
         font-family: $ir;
         color: #000;
         margin-bottom: 0;
+
+        &.small {
+          font-size: 10px;
+        }
 
         span {
           color: #595959;

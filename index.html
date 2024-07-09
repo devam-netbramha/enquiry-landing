@@ -82,6 +82,17 @@
             <h2 class="enquiry-section-title text-center">Discover how to manage your credit health effectively.</h2>
             <p class="enquiry-section-description text-center mx-auto">Unlock powerful tools that help build your credit profile and protect you from identity theft.</p>
             <div class="enquiry-plans-row">
+              <div class="enquiry-plans-item">
+                <label class="enquiry-plans-item-label" for="starterEnquiry" onclick="setButtonLink(this)">
+                  <input type="radio" name="enquiry-plan" id="starterEnquiry" value="Starter">
+                </label>
+                <p class="enquiry-plans-item-name">Starter</p>
+                <p class="enquiry-plans-item-kind">Single Purchase</p>
+                <div class="enquiry-plans-item-footer">
+                  <p class="enquiry-plans-item-price">₹118</p>
+                </div>
+                <p class="enquiry-plans-item-price small mt-2">CIBIL Score is not available with this plan.</p>
+              </div>
               <div class="enquiry-plans-item active">
                 <p class="popular-chips">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -162,7 +173,7 @@
             <div class="enquiry-plans-cta">
               <a href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1M550RM" class="primary-btn yellow subscribeBtn">subscribe Now</a>
             </div>
-            <p class="enquiry-plans-info"><span>Starter Plan:</span> Get your CIBIL Report <span>without</span> CIBIL Score with Starter Plan at Rs.118. <a href="#">Get Started</a></p>
+            <!-- <p class="enquiry-plans-info"><span>Starter Plan:</span> Get your CIBIL Report <span>without</span> CIBIL Score with Starter Plan at Rs.118. <a href="#">Get Started</a></p> -->
             <p class="enquiry-plans-info"><span>Free Plan:</span> You can also avail your FREE Annual Credit Report, available <span>only once</span> a calendar year. <a href="#">Enroll Now</a></p>
           </div>
           <div class="enquiry-tab">
@@ -624,23 +635,19 @@
     <script src="./js/jquery.min.js"></script>
     <script>
       // tab js start
-      $(document).ready(function () {
+      $('.enquiry-tab-list li a:not(:first)').addClass('inactive');
+      $('.enquiry-tab-container-item').hide();
+      $('.enquiry-tab-container-item:first').show();
 
-        $('.enquiry-tab-list li a:not(:first)').addClass('inactive');
-        $('.enquiry-tab-container-item').hide();
-        $('.enquiry-tab-container-item:first').show();
+      $('.enquiry-tab-list li a').click(function () {
+        var t = $(this).attr('id');
+        if ($(this).hasClass('inactive')) { //this is the start of our condition
+          $('.enquiry-tab-list li a').addClass('inactive');
+          $(this).removeClass('inactive');
 
-        $('.enquiry-tab-list li a').click(function () {
-          var t = $(this).attr('id');
-          if ($(this).hasClass('inactive')) { //this is the start of our condition
-            $('.enquiry-tab-list li a').addClass('inactive');
-            $(this).removeClass('inactive');
-
-            $('.enquiry-tab-container-item').hide();
-            $('#' + t + 'C').fadeIn('slow');
-          }
-        });
-
+          $('.enquiry-tab-container-item').hide();
+          $('#' + t + 'C').show();
+        }
       });
       // tab js end
 
@@ -695,6 +702,7 @@
 
         }
 
+        if (cardValue === 'Starter') link = 'https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1DPCIRO';
         if (cardValue === 'Standard') link = 'https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=6M800RM';
 
         if (cardValue === 'Premium') link = 'https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1Y1200RM';

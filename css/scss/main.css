@@ -465,6 +465,7 @@ table {
 .enquiry-plans-item {
   max-width: 33.333%;
   width: 100%;
+  min-height: 154px;
   padding: 20px 16px;
   border-radius: 8px;
   background-color: #ffffff;
@@ -475,6 +476,7 @@ table {
 @media (max-width: 768px) {
   .enquiry-plans-item {
     max-width: 100%;
+    min-height: inherit;
   }
 }
 .enquiry-plans-item.active {
@@ -563,6 +565,9 @@ table {
   font-family: "IntroRegular";
   color: #000;
   margin-bottom: 0;
+}
+.enquiry-plans-item-price.small {
+  font-size: 10px;
 }
 .enquiry-plans-item-price span {
   color: #595959;
