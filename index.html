@@ -94,8 +94,9 @@
                   </svg>
                   <span>Most Popular</span>
                 </p>
-                <input type="radio" name="enquiry-plan" id="basicEnquiry" value="Basic" checked>
-                <label class="enquiry-plans-item-label" for="basicEnquiry"></label>
+                <label class="enquiry-plans-item-label" for="basicEnquiry" onclick="setButtonLink(this)">
+                  <input type="radio" name="enquiry-plan" id="basicEnquiry" value="Basic" checked>
+                </label>
                 <p class="enquiry-plans-item-name">Basic
                   <span class="popBtn" onclick="basicTogglePop()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -114,8 +115,9 @@
                 </div>
               </div>
               <div class="enquiry-plans-item">
-                <input type="radio" name="enquiry-plan" id="standardEnquiry" value="Standard">
-                <label class="enquiry-plans-item-label" for="standardEnquiry"></label>
+                <label class="enquiry-plans-item-label" for="standardEnquiry" onclick="setButtonLink(this)">
+                  <input type="radio" name="enquiry-plan" id="standardEnquiry" value="Standard">
+                </label>
                 <p class="enquiry-plans-item-name">Standard
                   <span class="popBtn" onclick="standardTogglePop()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -135,8 +137,9 @@
                 </div>
               </div>
               <div class="enquiry-plans-item">
-                <input type="radio" name="enquiry-plan" id="premiumEnquiry" value="Premium">
-                <label class="enquiry-plans-item-label" for="premiumEnquiry"></label>
+                <label class="enquiry-plans-item-label" for="premiumEnquiry" onclick="setButtonLink(this)">
+                  <input type="radio" name="enquiry-plan" id="premiumEnquiry" value="Premium">
+                </label>
                 <p class="enquiry-plans-item-name">Premium
                   <span class="popBtn" onclick="premiumTogglePop()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -157,7 +160,7 @@
               </div>
             </div>
             <div class="enquiry-plans-cta">
-              <a href="#" class="primary-btn yellow">subscribe Now</a>
+              <a href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1M550RM" class="primary-btn yellow subscribeBtn">subscribe Now</a>
             </div>
             <p class="enquiry-plans-info"><span>Starter Plan:</span> Get your CIBIL Report <span>without</span> CIBIL Score with Starter Plan at Rs.118. <a href="#">Get Started</a></p>
             <p class="enquiry-plans-info"><span>Free Plan:</span> You can also avail your FREE Annual Credit Report, available <span>only once</span> a calendar year. <a href="#">Enroll Now</a></p>
@@ -645,7 +648,7 @@
       // radio click
       $(".enquiry-plans-item input[type='radio']").click(function () {
         $('.enquiry-plans-item').removeClass('active')
-        $(this).parent().addClass('active')
+        $(this).closest('.enquiry-plans-item').addClass('active')
       });
     </script>
 
@@ -672,6 +675,33 @@
           }
         });
       });
+    </script>
+
+    <script>
+      const btn = document.getElementsByClassName('subscribeBtn');
+
+      function setButtonLink(card) {
+        var radioEle = card.querySelector('input[name="enquiry-plan"]');
+        console.log(radioEle)
+        var cardValue;
+        if (radioEle) {
+          radioEle.checked = true;
+          cardValue = radioEle.value;
+        }
+
+        let link = 'https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1DPCIRO';
+        if (cardValue === 'Basic') {
+          link = 'https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1M550RM';
+
+        }
+
+        if (cardValue === 'Standard') link = 'https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=6M800RM';
+
+        if (cardValue === 'Premium') link = 'https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1Y1200RM';
+
+        $(btn).attr('href', link);
+
+      }
     </script>
   </body>
 

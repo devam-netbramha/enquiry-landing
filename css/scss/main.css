@@ -481,11 +481,11 @@ table {
   border: 1px solid rgba(0, 83, 101, 0.8);
   box-shadow: 4px 8px 16px 0px rgba(0, 0, 0, 0.06);
 }
+.enquiry-plans-item.active label::before {
+  display: block;
+}
 .enquiry-plans-item input {
   display: none;
-}
-.enquiry-plans-item input:checked + label::before {
-  display: block;
 }
 .enquiry-plans-item .popular-chips {
   position: absolute;

@@ -317,18 +317,16 @@
       &.active {
         border: 1px solid rgba(0, 83, 101, 0.80);
         box-shadow: 4px 8px 16px 0px rgba(0, 0, 0, 0.06);
+
+        label {
+          &::before {
+            display: block;
+          }
+        }
       }
 
       input {
         display: none;
-
-        &:checked {
-          &+label {
-            &::before {
-              display: block;
-            }
-          }
-        }
       }
 
       .popular-chips {
