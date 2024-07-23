@@ -132,8 +132,8 @@
 
         &-desc {
           font-family: $ir;
-          font-size: 18px;
-          line-height: 28px;
+          font-size: 16px;
+          line-height: 24px;
           color: #595959;
           margin-bottom: 0;
 
@@ -184,6 +184,7 @@
       @media(max-width: 575px) {
         font-size: 16px;
         line-height: 20px;
+      display: block;
       }
     }
 
@@ -193,7 +194,15 @@
       line-height: 28px;
       font-family: $ir;
       margin-bottom: 8px;
-      min-height: 54px;
+      max-height: 54px;
+      -webkit-line-clamp: 2;
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /* autoprefixer: on */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+
 
       @media(max-width: 575px) {
         font-size: 14px;
@@ -450,71 +459,72 @@
       padding: 0;
       border-bottom: 1px solid #E6E6E6;
 
+      @media(min-width: 768px){
+        display: none;
+      }
+
       li {
+        width: 100%;
+      }
+
+      &-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 155px;
+        text-align: center;
+        padding: 8px;
+        font-family: $isb;
+        font-size: 14px;
+        line-height: 20px;
+        color: $black;
+        border-bottom: 2px solid $primary_color;
+
         @media(max-width: 767px) {
-          max-width: 50%;
           width: 100%;
+          background-color: #E6F6FA;
         }
 
-        a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          width: 155px;
-          text-align: center;
-          padding: 8px;
-          font-family: $isb;
-          font-size: 14px;
-          line-height: 20px;
-          color: $black;
-          border-bottom: 2px solid $primary_color;
+        &.inactive {
+          color: #595959;
+          font-family: $ir;
+          border-bottom: none;
 
           @media(max-width: 767px) {
-            width: 100%;
-            background-color: #E6F6FA;
-          }
-
-          &.inactive {
-            color: #595959;
-            font-family: $ir;
-            border-bottom: none;
-
-            @media(max-width: 767px) {
-              background-color: transparent;
-            }
-
-            .tab-icon {
-              svg {
-                circle {
-                  fill: #F2F2F2;
-                }
-
-                path,
-                mask {
-                  fill: #595959;
-                }
-              }
-            }
+            background-color: transparent;
           }
 
           .tab-icon {
-            width: 24px;
-            height: 24px;
-
-            @media (min-width:767px) {
-              display: none;
-            }
-
             svg {
               circle {
-                fill: transparent;
+                fill: #F2F2F2;
               }
 
               path,
               mask {
-                fill: $primary_color;
+                fill: #595959;
               }
+            }
+          }
+        }
+
+        .tab-icon {
+          width: 24px;
+          height: 24px;
+
+          @media (min-width:767px) {
+            display: none;
+          }
+
+          svg {
+            circle {
+              fill: transparent;
+            }
+
+            path,
+            mask {
+              fill: $primary_color;
             }
           }
         }
@@ -535,7 +545,14 @@
           justify-content: space-between;
 
           @media(max-width: 575px) {
-            gap: 16px;
+            flex-wrap: wrap;
+          }
+          .primary-btn{
+            @media(max-width: 575px) {
+              margin-left: 0;
+              margin-top: 16px;
+              width: 100%;
+            } 
           }
         }
 
@@ -574,6 +591,10 @@
             @media(max-width: 575px) {
               font-size: 14px;
               line-height: 20px;
+            }
+            a{
+              color: #004364;
+              text-decoration: underline;
             }
           }
         }
@@ -706,8 +727,8 @@
 
         &-desc {
           font-family: $ir;
-          font-size: 18px;
-          line-height: 28px;
+          font-size: 16px;
+          line-height: 24px;
           color: #595959;
           margin-bottom: 0;
 
