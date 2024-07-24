@@ -65,6 +65,53 @@
           margin: 16px 0 32px;
         }
       }
+      .enquiry-banner {
+        background-color: #f5f5f5;
+        padding: 20px 0;
+      }
+      @media (min-width: 992px) {
+        .enquiry-banner {
+          background-image: url("../../images/enquiry_banner_new.png");
+          background-position: top right;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      .enquiry-banner .primary-btn {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+      .enquiry-banner-title {
+        font-family: "IntroSemiBold";
+        font-size: 28px;
+        line-height: 1.2;
+        color: #000;
+        margin-bottom: 16px;
+        margin-top: 60px;
+      }
+      @media (max-width: 768px) {
+        .enquiry-banner-title {
+          margin-top: 30px;
+          font-size: 22px;
+        }
+      }
+      .enquiry-banner-desc {
+        font-size: 16px;
+        line-height: 22px;
+        font-family: "IntroRegular";
+        color: #262626;
+        margin-bottom: 0;
+      }
+      @media (max-width: 575px) {
+        .enquiry-banner-desc {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .enquiry-banner-desc.small {
+        font-size: 12px;
+        line-height: 19px;
+      }
       .enquiry-features {
         background-color: #F6F7FC;
         padding: 80px 0;
@@ -876,328 +923,24 @@
           display: none !important;
         }
       }
-      .section-heading {
-        font-family: "Intro Bold";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 44px;
-        letter-spacing: -0.01em;
-        color: #2c2c2c;
-        margin-bottom: 20px;
-      }
-
-      @media (max-width: 992px) {
-        .section-para {
-          font-size: 16px;
-          line-height: 24px;
-        }
-      }
-      .link-btn {
-        font-family: "IntroRegular";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0.02em;
-        text-decoration-line: underline;
-        color: #000;
-        text-transform: capitalize;
-      }
-
-      .link-btn:hover {
-        color: #f16e00;
-      }
-
-      .max-content {
-        max-width: 780px;
-        margin: auto;
-      }
-
-      header {
-        width: 100%;
-        padding: 10px 0;
-        position: fixed;
-        top: 0;
-        background: #fff;
-        z-index: 10;
-        border-bottom: 4px solid #fcd800;
-      }
-
-      header .overlay {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(32, 32, 32, 0.82);
-        -webkit-backdrop-filter: blur(4px);
-        backdrop-filter: blur(4px);
-        z-index: -1;
-        transition: 0.5s;
-        opacity: 0;
-        display: none;
-      }
-
-      header .overlay.visible {
-        display: block;
-        opacity: 1;
-      }
-
-      header .header-wrap {
-        display: flex;
-        width: 100%;
-        max-width: 1440px;
-        padding: 0 0px;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        background: #fff;
-      }
-
-      header .header-wrap .header-icon a {
-        display: inline-block;
-        position: relative;
-      }
-
-      header .header-wrap .header-icon .logo-img {
-        width: 98px;
-        height: auto;
-      }
-
-      header .header-wrap .header-icon .beWorthy {
-        display: flex;
-        align-items: center;
-        padding-right: 16px;
-        margin-right: 16px;
-        border-right: 1px solid #ACACAC;
-      }
-
-      .beWorthy img {
-        width: 114px;
-      }
-      @media (max-width: 1199px) {
-        .beWorthy img {
-          width: 80px;
-        }
-      }
-
-      header .header-wrap .header-icon .beWorthy b {
-        color: #000;
-        font-size: 24px;
-        line-height: 30px;
-        vertical-align: middle;
-        letter-spacing: 0;
-      }
-
-      header .header-wrap .header-nav {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      header .header-wrap .header-nav .nav-list {
-        margin: 0;
-        display: flex;
-        align-items: center;
-      }
-
-      header .header-wrap .header-nav .nav-list .list {
-        margin: 0;
-        margin-right: 35px;
-      }
-
-      @media (min-width: 993px) and (max-width: 1199px) {
-        header .header-wrap .header-nav .nav-list .list {
-          margin-right: 15px;
-        }
-      }
-      header .header-wrap .header-nav .nav-list .list .list-link {
-        font-family: "IntroRegular";
-        font-size: 16px;
-        line-height: 30px;
-        letter-spacing: 0.01em;
-        color: #2c2c2c;
-        margin-bottom: -3px;
-      }
-      @media (max-width: 1199px) {
-        header .header-wrap .header-nav .nav-list .list .list-link {
-          font-size: 15px;
-        }
-      }
-
-      header .header-wrap .header-nav .primary-btn {
-        padding: 14px 20px 10px;
-      }
-
-      @media (min-width: 1025px) {
-        header .header-wrap .header-nav .primary-btn {
-          margin-left: 25px;
-        }
-      }
-      header .header-wrap .hamburger {
-        cursor: pointer;
-      }
-
-      @media (max-width: 992px) {
-        header {
-          padding: 0;
-        }
-        header .header-wrap {
-          padding: 8px 20px;
-        }
-        header .header-wrap .hamburger {
-          display: flex;
-          align-items: center;
-        }
-        header .header-wrap .hamburger .language-selector {
-          margin-right: 10px;
-        }
-        header .header-wrap .header-icon a {
-          display: inline-block;
-          position: relative;
-        }
-        header .header-wrap .header-icon a::after {
-          right: -14px;
-          border-right: 1px solid #ddd;
-        }
-        header .header-wrap .header-icon .logo-img {
-          width: 65px;
-          height: auto;
-        }
-        header .header-wrap .header-icon .beWorthy {
-          font-size: 18px;
-          line-height: 30px;
-          color: #00a6ca;
-          padding-left: 10px;
-          margin-left: 10px;
-        }
-        header .header-wrap .header-icon .beWorthy b {
-          font-size: 18px;
-          line-height: 30px;
-        }
-        header .header-wrap .header-nav {
-          flex-direction: column;
-          width: 100%;
-          position: absolute;
-          opacity: 0;
-          bottom: 0;
-          left: 0;
-          transform: translateY(-200%);
-          border-top: 1px solid #ddd;
-          padding: 0 20px 20px;
-          background: #fff;
-          transition: 0.5s;
-          z-index: -1;
-        }
-        header .header-wrap .header-nav.active {
-          opacity: 1;
-          transform: translateY(100%);
-        }
-        header .header-wrap .header-nav .nav-list {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        header .header-wrap .header-nav .nav-list .list {
-          padding: 15px 0;
-          margin: 0;
-          margin-right: 0;
-          width: 100%;
-        }
-        header .header-wrap .header-nav .nav-list .list:not(:last-child) {
-          border-bottom: 1px solid #ddd;
-        }
-        header .header-wrap .header-nav .nav-list .list .list-link {
-          display: block;
-        }
-        header .header-wrap .header-nav .primary-btn {
-          max-width: 370px;
-          margin-top: 15px;
-        }
-      }
-      .header-list-item {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        font-size: 14px;
-      }
-      .header-list-item:hover {
-        display: flex;
-      }
-
-      .header-list-item span {
-        position: relative;
-        top: 2px;
-        font-family: "IntroRegular";
-        font-size: 16px;
-        line-height: 30px;
-        color: #2C2C2C;
-      }
-
-      .header-list-item.language-selector > svg:first-of-type {
-        margin-right: 12px;
-      }
-
-      .header-list-item.language-selector > svg:last-of-type {
-        margin-right: 0;
-        margin-left: 10px;
-      }
-
-      .language-selector {
-        position: relative;
-        text-decoration: none !important;
-      }
-
-      .language-selector.active:not(.header-list-item-mobile) > svg:last-of-type {
-        transform: rotate(180deg);
-      }
-
-      .language-list {
-        position: absolute;
-        display: none;
-        left: 0;
-        top: calc(100% + 10px);
-        opacity: 1 !important;
-        width: 205px !important;
-        background: #ffffff;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .language-list .langauge-item {
-        padding: 15px 0 12px 50px;
-        margin: 0;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .language-list .langauge-item:hover {
-        background-color: #cdf6ff;
-        color: #00a6ca;
-      }
-
-      .language-list .langauge-item.active {
-        background-color: #cdf6ff;
-        color: #00a6ca;
-      }
-
-      @media (max-width: 992px) {
-        .language-list {
-          top: 100%;
-          width: 100% !important;
-        }
-        .language-list .langauge-item {
-          padding-left: 20px;
-          text-transform: capitalize;
-        }
-        .language-list .langauge-item.active {
-          background-color: #cdf6ff;
-          color: #00a6ca;
-        }
-      }
     </style>
   </head>
 
   <body>
     <main>
+      <section class="enquiry-banner">
+        <div class="container">
+          <div class="col-lg-6 d-lg-none d-block">
+            <img class="img-fluid" src="./images/enquiry_banner_new.png">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="enquiry-banner-title">What is a Credit Enquiry?</h1>
+            <p class="enquiry-banner-desc">Enquiries are often referred to as loan and credit card applications. Every time an ‘individual/consumer’ or ‘businesses/commercial entity’ applies for a loan or credit card, respective lender* can access their ‘Credit Information report (CIR)’ or Company Credit Report (CCR). These applications are recorded in your credit report and the same is referred as “Enquiries” in your CIR or CCR.</p>
+            <p class="enquiry-banner-desc small">*Lender refers to any bank or financial institution</p>
+            <a href="#" class="primary-btn yellow">Check Your Cibil Score and Report</a>
+          </div>
+        </div>
+      </section>
       <section class="enquiry-features">
         <div class="container">
           <h2 class="enquiry-section-title">Why have I received an enquiry alert?</h2>

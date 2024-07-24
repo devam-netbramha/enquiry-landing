@@ -27,7 +27,47 @@
       }
     }
   }
-
+  &-banner{
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    @media(min-width: 992px){
+      background-image: url('../../images/enquiry_banner_new.png');
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .primary-btn{
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    &-title{
+      font-family: $isb;
+      font-size: 28px;
+      line-height: 1.2;
+      color: #000;
+      margin-bottom: 16px;
+      margin-top: 60px;
+      @media(max-width: 768px){
+        margin-top: 30px;
+        font-size: 22px;
+      }
+    }
+    &-desc{
+      font-size: 16px;
+      line-height: 22px;
+      font-family: $ir;
+      color: $black;
+      margin-bottom: 0;
+      @media(max-width: 575px){
+        font-size: 14px;
+        line-height: 20px;
+      }
+      &.small{
+        font-size: 12px;
+        line-height: 19px;
+      }
+    }
+  }
   &-features {
     background-color: #F6F7FC;
     padding: 80px 0;
