@@ -21,14 +21,22 @@ header-list-item
 @font-face {
   font-family: "Intro-Light";
   src: url("../../fonts/Intro-Light.otf") format("truetype");
+  font-weight: 300;
 }
 @font-face {
   font-family: "IntroRegular";
   src: url("../../fonts/IntroRegular.ttf") format("truetype");
+  font-weight: 400;
 }
 @font-face {
   font-family: "IntroSemiBold";
   src: url("../../fonts/IntroSemiBold.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Intro";
+  src: url("../../fonts/2CA963-0-0.woff2") format("woff2"), url("../../fonts/2CA963-0-0.woff") format("woff"), url("../../fonts/2CA963-0-0.ttf") format("truetype");
+  font-weight: 700;
 }
 @font-face {
   font-family: "Roboto-Bold";
@@ -47,7 +55,8 @@ header-list-item
 }
 .enquiry-section-title {
   color: #000;
-  font-family: "IntroSemiBold";
+  font-family: "Intro";
+  font-weight: 700;
   font-size: 32px;
   line-height: 44px;
   margin-bottom: 0;
@@ -89,7 +98,8 @@ header-list-item
   margin-top: 20px;
 }
 .enquiry-banner-title {
-  font-family: "IntroSemiBold";
+  font-family: "Intro";
+  font-weight: 700;
   font-size: 28px;
   line-height: 1.2;
   color: #000;
@@ -116,6 +126,7 @@ header-list-item
   }
 }
 .enquiry-banner-desc.small {
+  margin-top: 16px;
   font-size: 12px;
   line-height: 19px;
 }
@@ -613,7 +624,8 @@ header-list-item
 }
 .enquiry-tab-container-item-content .tab-title {
   color: #000;
-  font-family: "IntroSemiBold";
+  font-family: "Intro";
+  font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 6px;
@@ -671,7 +683,8 @@ header-list-item
   }
 }
 .section-keywords-title {
-  font-family: "IntroSemiBold";
+  font-family: "Intro";
+  font-weight: 700;
   font-size: 24px;
   line-height: 33px;
   text-align: center;
